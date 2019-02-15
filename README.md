@@ -6,9 +6,9 @@ $ oc adm policy add-cluster-role-to-user cluster-admin system --as=system:admin
 ```
 $ kubectl --namespace kube-system create serviceaccount tiller
 
-$ kubectl create clusterrolebinding tiller \
-              --clusterrole cluster-admin \
-              --serviceaccount=kube-system:tiller
+$ kubectl create clusterrolebinding tiller-cluster-rule \
+          --clusterrole=cluster-admin \
+          --serviceaccount=kube-system:tiller
 
 $ helm init --service-account tiller
 
