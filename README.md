@@ -12,5 +12,10 @@ $ kubectl create clusterrolebinding tiller-cluster-rule \
 
 $ helm init --service-account tiller
 
-$ helm repo update 
+$ helm repo update
+```
+#### Install nginx-ingress with RBAC enabled
+
+```
+helm install --name nginx-ingress stable/nginx-ingress --set rbac.create=true
 ```
