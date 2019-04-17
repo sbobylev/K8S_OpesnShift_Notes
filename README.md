@@ -33,7 +33,7 @@ $ kubectl create secret docker-registry gcr-credentials \
 $ kubectl patch serviceaccount default --patch '{"imagePullSecrets": [{"name": gcr-credentials}]}' --namespace default
 ```
 
-Optionally, deploy a pod referring to the secreted in the pod spec.
+Optionally, deploy a pod referring to the secret in the pod spec.
 
 ```
 apiVersion: v1
